@@ -11,16 +11,18 @@ def Graph(filename, n, xlabel = '', ylabel = ''):
     plt.plot(Values(filename)[0], Values(filename)[1], 'bo', label="Data")
     if n == 1:
         plt.plot(t, p, 'k', label="First degree polynomial")
-    if n == 2:
+    elif n == 2:
         plt.plot(t, p, 'k', label="Second degree polynomial")
-    if n == 3:
+    elif n == 3:
         plt.plot(t, p, 'k', label="Third degree polynomial")
     else:
         plt.plot(t, p, 'k', label="{}th degree polynomial".format(n))
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
-    plt.legend()
-    plt.savefig('{}th degree'.format(n))
+    #plt.legend()
+    plt.ylim([0, 0.015])
+    plt.show()
+    #plt.savefig('{}th degree'.format(n))
     
 
 
