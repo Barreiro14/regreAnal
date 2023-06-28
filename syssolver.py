@@ -24,6 +24,7 @@ def Solver(filename, n): #el orden es el order del polinomio de Taylor a evaluar
     ai = np.linalg.solve(w, S)
     return ai
 
+
     
 '''
 Solver(3)
